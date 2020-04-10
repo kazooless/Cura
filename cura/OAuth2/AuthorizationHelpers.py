@@ -99,7 +99,7 @@ class AuthorizationHelpers:
             })
         except requests.exceptions.ConnectionError:
             # Connection was suddenly dropped. Nothing we can do about that.
-            Logger.log("w", "Something failed while attempting to parse the JWT token")
+            Logger.logException("w", "Something failed while attempting to parse the JWT token")
             return None
         if token_request.status_code not in (200, 201):
             Logger.log("w", "Could not retrieve token data from auth server: %s", token_request.text)
@@ -115,9 +115,10 @@ class AuthorizationHelpers:
         )
 
     @staticmethod
-    ##  Generate a 16-character verification code.
-    #   \param code_length: How long should the code be?
-    def generateVerificationCode(code_length: int = 16) -> str:
+    ##  Generate a verification code of arbitrary length.
+    #   \param code_length: How long should the code be? This should never be lower than 16, but it's probably better to
+    #   leave it at 32
+    def generateVerificationCode(code_length: int = 32) -> str:
         return "".join(random.choice("0123456789ABCDEF") for i in range(code_length))
 
     @staticmethod

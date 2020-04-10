@@ -37,9 +37,6 @@
         "line_width": {
             "value": "round(machine_nozzle_size * 0.875, 2)"
         },
-        "speed_layer_0": {
-            "default_value": 20
-        },
         "speed_support": {
             "value": "speed_wall_0"
         },
@@ -54,9 +51,6 @@
         },
         "machine_nozzle_head_distance": {
             "default_value": 5
-        },
-        "machine_nozzle_expansion_angle": {
-            "default_value": 45
         },
         "machine_heat_zone_length": {
             "default_value": 20

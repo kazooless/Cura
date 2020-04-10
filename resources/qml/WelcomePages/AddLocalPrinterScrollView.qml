@@ -75,7 +75,7 @@ Item
             anchors.right: parent.right
             anchors.top: parent.top
 
-            height: maxItemCountAtOnce * UM.Theme.getSize("action_button").height
+            height: (maxItemCountAtOnce * UM.Theme.getSize("action_button").height) - UM.Theme.getSize("default_margin").height
 
             ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
             ScrollBar.vertical.policy: ScrollBar.AsNeeded
@@ -86,8 +86,13 @@ Item
             {
                 id: machineList
 
-                cacheBuffer: 1000000   // Set a large cache to effectively just cache every list item.
-
+                // CURA-6793
+                // Enabling the buffer seems to cause the blank items issue. When buffer is enabled, if the ListView's
+                // individual item has a dynamic change on its visibility, the ListView doesn't redraw itself.
+                // The default value of cacheBuffer is platform-dependent, so we explicitly disable it here.
+                cacheBuffer: 0
+                boundsBehavior: Flickable.StopAtBounds
+                flickDeceleration: 20000  // To prevent the flicking behavior.
                 model: UM.DefinitionContainersModel
                 {
                     id: machineDefinitionsModel

@@ -5,7 +5,6 @@ from cura.UI import PrintInformation
 from cura.Settings.MachineManager import MachineManager
 
 from unittest.mock import MagicMock, patch
-from UM.Application import Application
 from UM.MimeTypeDatabase import MimeTypeDatabase, MimeType
 
 
@@ -37,11 +36,10 @@ def getPrintInformation(printer_name) -> PrintInformation:
     mock_machine_manager = MagicMock()
     mock_machine_manager.getAbbreviatedMachineName = functools.partial(original_get_abbreviated_name, mock_machine_manager)
     mock_application.getMachineManager = MagicMock(return_value = mock_machine_manager)
+    with patch("UM.Application.Application.getInstance", MagicMock(return_value = mock_application)):
 
-    Application.getInstance = MagicMock(return_value = mock_application)
-
-    with patch("json.loads", lambda x: {}):
-        print_information = PrintInformation.PrintInformation(mock_application)
+        with patch("json.loads", lambda x: {}):
+            print_information = PrintInformation.PrintInformation(mock_application)
 
     return print_information
 

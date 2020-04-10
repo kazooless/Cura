@@ -1,21 +1,20 @@
 # Cura
-# Copyright (C) 2019 Ultimaker B.V.
+# Copyright (C) 2020 Ultimaker B.V.
 # This file is distributed under the same license as the Cura package.
-# Ruben Dulek <r.dulek@ultimaker.com>, 2019.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Cura 4.3\n"
+"Project-Id-Version: Cura 4.6\n"
 "Report-Msgid-Bugs-To: r.dulek@ultimaker.com\n"
-"POT-Creation-Date: 2019-09-10 16:55+0000\n"
-"PO-Revision-Date: 2019-07-29 15:51+0200\n"
+"POT-Creation-Date: 2020-04-06 16:33+0000\n"
+"PO-Revision-Date: 2020-02-21 15:14+0100\n"
 "Last-Translator: Lionbridge <info@lionbridge.com>\n"
 "Language-Team: Russian <info@lionbridge.com>, Ruslan Popov <ruslan.popov@gmail.com>, Russian <info@bothof.nl>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.3\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: fdmprinter.def.json
@@ -83,8 +82,8 @@ msgstr "GUID материала"
 
 #: fdmprinter.def.json
 msgctxt "material_guid description"
-msgid "GUID of the material. This is set automatically. "
-msgstr "Идентификатор материала, устанавливается автоматически. "
+msgid "GUID of the material. This is set automatically."
+msgstr ""
 
 #: fdmprinter.def.json
 msgctxt "material_diameter label"
@@ -297,16 +296,6 @@ msgid "The distance from the tip of the nozzle in which heat from the nozzle is 
 msgstr "Расстояние от кончика сопла до места, где тепло передаётся материалу."
 
 #: fdmprinter.def.json
-msgctxt "machine_filament_park_distance label"
-msgid "Filament Park Distance"
-msgstr "Расстояние парковки материала"
-
-#: fdmprinter.def.json
-msgctxt "machine_filament_park_distance description"
-msgid "The distance from the tip of the nozzle where to park the filament when an extruder is no longer used."
-msgstr "Расстояние от кончика сопла до места, где останавливается материал, пока экструдер не используется."
-
-#: fdmprinter.def.json
 msgctxt "machine_nozzle_temp_enabled label"
 msgid "Enable Nozzle Temperature Control"
 msgstr "Разрешить управление температурой сопла"
@@ -412,6 +401,16 @@ msgid "Whether to use firmware retract commands (G10/G11) instead of using the E
 msgstr "Определяет, использовать ли команды отката встроенного программного обеспечения (G10/G11) вместо применения свойства E в командах G1 для отката материала."
 
 #: fdmprinter.def.json
+msgctxt "machine_extruders_share_heater label"
+msgid "Extruders Share Heater"
+msgstr "Общий нагреватель экструдеров"
+
+#: fdmprinter.def.json
+msgctxt "machine_extruders_share_heater description"
+msgid "Whether the extruders share a single heater rather than each extruder having its own heater."
+msgstr "Указывает, используют ли для все экструдеры общий нагреватель или у каждого имеется отдельный."
+
+#: fdmprinter.def.json
 msgctxt "machine_disallowed_areas label"
 msgid "Disallowed Areas"
 msgstr "Запрещенные области"
@@ -430,16 +429,6 @@ msgstr "Запрещённые зоны для сопла"
 msgctxt "nozzle_disallowed_areas description"
 msgid "A list of polygons with areas the nozzle is not allowed to enter."
 msgstr "Список полигонов с областями, в которые не должно заходить сопло."
-
-#: fdmprinter.def.json
-msgctxt "machine_head_polygon label"
-msgid "Machine Head Polygon"
-msgstr "Полигон головки принтера"
-
-#: fdmprinter.def.json
-msgctxt "machine_head_polygon description"
-msgid "A 2D silhouette of the print head (fan caps excluded)."
-msgstr "2D контур головы принтера (исключая крышки вентилятора)."
 
 #: fdmprinter.def.json
 msgctxt "machine_head_with_fans_polygon label"
@@ -1032,6 +1021,16 @@ msgid "The number of bottom layers. When calculated by the bottom thickness, thi
 msgstr "Количество слоёв в дне. При вычислении толщины дна это значение округляется до целого."
 
 #: fdmprinter.def.json
+msgctxt "initial_bottom_layers label"
+msgid "Initial Bottom Layers"
+msgstr "Начальные слои дна"
+
+#: fdmprinter.def.json
+msgctxt "initial_bottom_layers description"
+msgid "The number of initial bottom layers, from the build-plate upwards. When calculated by the bottom thickness, this value is rounded to a whole number."
+msgstr "Количество начальных слоев дна, вверх от рабочего стола. При вычислении толщины дна это значение округляется до целого."
+
+#: fdmprinter.def.json
 msgctxt "top_bottom_pattern label"
 msgid "Top/Bottom Pattern"
 msgstr "Шаблон для крышки/дна"
@@ -1252,6 +1251,16 @@ msgid "Amount of offset applied to all polygons in the first layer. A negative v
 msgstr "Сумма смещений, применяемая ко всем полигонам первого слоя. Отрицательное значение может компенсировать \"хлюпанье\" первого слоя, известное как \"слоновая нога\"."
 
 #: fdmprinter.def.json
+msgctxt "hole_xy_offset label"
+msgid "Hole Horizontal Expansion"
+msgstr ""
+
+#: fdmprinter.def.json
+msgctxt "hole_xy_offset description"
+msgid "Amount of offset applied to all holes in each layer. Positive values increase the size of the holes, negative values reduce the size of the holes."
+msgstr ""
+
+#: fdmprinter.def.json
 msgctxt "z_seam_type label"
 msgid "Z Seam Alignment"
 msgstr "Выравнивание шва по оси Z"
@@ -1424,8 +1433,7 @@ msgstr "Разрешить разглаживание"
 #: fdmprinter.def.json
 msgctxt "ironing_enabled description"
 msgid "Go over the top surface one additional time, but this time extruding very little material. This is meant to melt the plastic on top further, creating a smoother surface. The pressure in the nozzle chamber is kept high so that the creases in the surface are filled with material."
-msgstr "Проходить по верхней оболочке еще раз, но на этот раз выдавливая очень мало материала. Это приводит к плавлению пластика, что создает более гладкую поверхность."
-" Давление в камере сопла поддерживается на высоком уровне, благодаря чему складки на поверхности заполняются материалом."
+msgstr "Проходить по верхней оболочке еще раз, но на этот раз выдавливая очень мало материала. Это приводит к плавлению пластика, что создает более гладкую поверхность. Давление в камере сопла поддерживается на высоком уровне, благодаря чему складки на поверхности заполняются материалом."
 
 #: fdmprinter.def.json
 msgctxt "ironing_only_highest_layer label"
@@ -1710,8 +1718,7 @@ msgstr "Рандомизация начала заполнения"
 #: fdmprinter.def.json
 msgctxt "infill_randomize_start_location description"
 msgid "Randomize which infill line is printed first. This prevents one segment becoming the strongest, but it does so at the cost of an additional travel move."
-msgstr "Рандомизировать, какая линия заполнения печатается первой. Это препятствует тому, чтобы один сегмент стал самым сильным, но делает это за счет дополнительного"
-" перемещения."
+msgstr "Рандомизировать, какая линия заполнения печатается первой. Это препятствует тому, чтобы один сегмент стал самым сильным, но делает это за счет дополнительного перемещения."
 
 #: fdmprinter.def.json
 msgctxt "infill_multiplier label"
@@ -1928,6 +1935,26 @@ msgid "Skin areas narrower than this are not expanded. This avoids expanding the
 msgstr "Области оболочек уже указанного значения не расширяются. Это предотвращает расширение узких областей оболочек, которые создаются, если наклон поверхности модели близок к вертикальному."
 
 #: fdmprinter.def.json
+msgctxt "skin_edge_support_thickness label"
+msgid "Skin Edge Support Thickness"
+msgstr "Толщина опоры края оболочки"
+
+#: fdmprinter.def.json
+msgctxt "skin_edge_support_thickness description"
+msgid "The thickness of the extra infill that supports skin edges."
+msgstr "Толщина дополнительного объема, который поддерживает края оболочки."
+
+#: fdmprinter.def.json
+msgctxt "skin_edge_support_layers label"
+msgid "Skin Edge Support Layers"
+msgstr "Слои, которые поддерживают края оболочки"
+
+#: fdmprinter.def.json
+msgctxt "skin_edge_support_layers description"
+msgid "The number of infill layers that supports skin edges."
+msgstr "Количество слоев, которые поддерживают края оболочки."
+
+#: fdmprinter.def.json
 msgctxt "material label"
 msgid "Material"
 msgstr "Материал"
@@ -2118,6 +2145,16 @@ msgid "How fast the filament needs to be retracted just before breaking it off i
 msgstr "Насколько быстро следует убирать материал, чтобы он отломился."
 
 #: fdmprinter.def.json
+msgctxt "material_break_preparation_temperature label"
+msgid "Break Preparation Temperature"
+msgstr "Температура подготовки к отламыванию"
+
+#: fdmprinter.def.json
+msgctxt "material_break_preparation_temperature description"
+msgid "The temperature used to purge material, should be roughly equal to the highest possible printing temperature."
+msgstr "Температура, используемая для выдавливания материала, должна быть примерно равна максимальной температуре при печати."
+
+#: fdmprinter.def.json
 msgctxt "material_break_retracted_position label"
 msgid "Break Retracted Position"
 msgstr "Положение отката для отламывания"
@@ -2146,6 +2183,66 @@ msgstr "Температура отламывания"
 msgctxt "material_break_temperature description"
 msgid "The temperature at which the filament is broken for a clean break."
 msgstr "Температура, при которой материал отломится чисто."
+
+#: fdmprinter.def.json
+msgctxt "material_flush_purge_speed label"
+msgid "Flush Purge Speed"
+msgstr "Скорость выдавливания заподлицо"
+
+#: fdmprinter.def.json
+msgctxt "material_flush_purge_speed description"
+msgid "How fast to prime the material after switching to a different material."
+msgstr ""
+
+#: fdmprinter.def.json
+msgctxt "material_flush_purge_length label"
+msgid "Flush Purge Length"
+msgstr "Длина выдавливания заподлицо"
+
+#: fdmprinter.def.json
+msgctxt "material_flush_purge_length description"
+msgid "How much material to use to purge the previous material out of the nozzle (in length of filament) when switching to a different material."
+msgstr ""
+
+#: fdmprinter.def.json
+msgctxt "material_end_of_filament_purge_speed label"
+msgid "End of Filament Purge Speed"
+msgstr ""
+
+#: fdmprinter.def.json
+msgctxt "material_end_of_filament_purge_speed description"
+msgid "How fast to prime the material after replacing an empty spool with a fresh spool of the same material."
+msgstr ""
+
+#: fdmprinter.def.json
+msgctxt "material_end_of_filament_purge_length label"
+msgid "End of Filament Purge Length"
+msgstr ""
+
+#: fdmprinter.def.json
+msgctxt "material_end_of_filament_purge_length description"
+msgid "How much material to use to purge the previous material out of the nozzle (in length of filament) when replacing an empty spool with a fresh spool of the same material."
+msgstr ""
+
+#: fdmprinter.def.json
+msgctxt "material_maximum_park_duration label"
+msgid "Maximum Park Duration"
+msgstr "Максимальная продолжительность парковки"
+
+#: fdmprinter.def.json
+msgctxt "material_maximum_park_duration description"
+msgid "How long the material can be kept out of dry storage safely."
+msgstr ""
+
+#: fdmprinter.def.json
+msgctxt "material_no_load_move_factor label"
+msgid "No Load Move Factor"
+msgstr "Коэффициент движения без нагрузки"
+
+#: fdmprinter.def.json
+msgctxt "material_no_load_move_factor description"
+msgid "A factor indicating how much the filament gets compressed between the feeder and the nozzle chamber, used to determine how far to move the material for a filament switch."
+msgstr ""
 
 #: fdmprinter.def.json
 msgctxt "material_flow label"
@@ -2288,116 +2385,6 @@ msgid "Flow compensation for the first layer: the amount of material extruded on
 msgstr "Компенсация потока для первого слоя: объем выдавленного материала на первом слое умножается на этот коэффициент."
 
 #: fdmprinter.def.json
-msgctxt "retraction_enable label"
-msgid "Enable Retraction"
-msgstr "Разрешить откат"
-
-#: fdmprinter.def.json
-msgctxt "retraction_enable description"
-msgid "Retract the filament when the nozzle is moving over a non-printed area. "
-msgstr "Откат нити при движении сопла вне зоны печати. "
-
-#: fdmprinter.def.json
-msgctxt "retract_at_layer_change label"
-msgid "Retract at Layer Change"
-msgstr "Откат при смене слоя"
-
-#: fdmprinter.def.json
-msgctxt "retract_at_layer_change description"
-msgid "Retract the filament when the nozzle is moving to the next layer."
-msgstr "Откат нити при перемещении сопла на следующий слой."
-
-#: fdmprinter.def.json
-msgctxt "retraction_amount label"
-msgid "Retraction Distance"
-msgstr "Величина отката"
-
-#: fdmprinter.def.json
-msgctxt "retraction_amount description"
-msgid "The length of material retracted during a retraction move."
-msgstr "Длина нити материала, которая будет извлечена по время отката."
-
-#: fdmprinter.def.json
-msgctxt "retraction_speed label"
-msgid "Retraction Speed"
-msgstr "Скорость отката"
-
-#: fdmprinter.def.json
-msgctxt "retraction_speed description"
-msgid "The speed at which the filament is retracted and primed during a retraction move."
-msgstr "Скорость, с которой материал будет извлечён и возвращён обратно при откате."
-
-#: fdmprinter.def.json
-msgctxt "retraction_retract_speed label"
-msgid "Retraction Retract Speed"
-msgstr "Скорость извлечения при откате"
-
-#: fdmprinter.def.json
-msgctxt "retraction_retract_speed description"
-msgid "The speed at which the filament is retracted during a retraction move."
-msgstr "Скорость с которой нить будет извлечена при откате."
-
-#: fdmprinter.def.json
-msgctxt "retraction_prime_speed label"
-msgid "Retraction Prime Speed"
-msgstr "Скорость заправки при откате"
-
-#: fdmprinter.def.json
-msgctxt "retraction_prime_speed description"
-msgid "The speed at which the filament is primed during a retraction move."
-msgstr "Скорость с которой материал будет возвращён при откате."
-
-#: fdmprinter.def.json
-msgctxt "retraction_extra_prime_amount label"
-msgid "Retraction Extra Prime Amount"
-msgstr "Дополнительно заполняемый объём при откате"
-
-#: fdmprinter.def.json
-msgctxt "retraction_extra_prime_amount description"
-msgid "Some material can ooze away during a travel move, which can be compensated for here."
-msgstr "Небольшое количество материала может выдавиться во время движения, что может быть скомпенсировано с помощью данного параметра."
-
-#: fdmprinter.def.json
-msgctxt "retraction_min_travel label"
-msgid "Retraction Minimum Travel"
-msgstr "Минимальное перемещение при откате"
-
-#: fdmprinter.def.json
-msgctxt "retraction_min_travel description"
-msgid "The minimum distance of travel needed for a retraction to happen at all. This helps to get fewer retractions in a small area."
-msgstr "Минимальное расстояние на которое необходимо переместиться для отката, чтобы он произошёл. Этот параметр помогает уменьшить количество откатов на небольшой области печати."
-
-#: fdmprinter.def.json
-msgctxt "retraction_count_max label"
-msgid "Maximum Retraction Count"
-msgstr "Максимальное количество откатов"
-
-#: fdmprinter.def.json
-msgctxt "retraction_count_max description"
-msgid "This setting limits the number of retractions occurring within the minimum extrusion distance window. Further retractions within this window will be ignored. This avoids retracting repeatedly on the same piece of filament, as that can flatten the filament and cause grinding issues."
-msgstr "Данный параметр ограничивает число откатов, которые происходят внутри окна минимальной дистанции экструзии. Дальнейшие откаты внутри этого окна будут проигнорированы. Это исключает выполнение множества повторяющихся откатов над одним и тем же участком нити, что позволяет избежать проблем с истиранием нити."
-
-#: fdmprinter.def.json
-msgctxt "retraction_extrusion_window label"
-msgid "Minimum Extrusion Distance Window"
-msgstr "Окно минимальной расстояния экструзии"
-
-#: fdmprinter.def.json
-msgctxt "retraction_extrusion_window description"
-msgid "The window in which the maximum retraction count is enforced. This value should be approximately the same as the retraction distance, so that effectively the number of times a retraction passes the same patch of material is limited."
-msgstr "Окно, в котором может быть выполнено максимальное количество откатов. Это значение приблизительно должно совпадать с расстоянием отката таким образом, чтобы количество выполненных откатов распределялось на величину выдавленного материала."
-
-#: fdmprinter.def.json
-msgctxt "limit_support_retractions label"
-msgid "Limit Support Retractions"
-msgstr "Ограничить откаты поддержки"
-
-#: fdmprinter.def.json
-msgctxt "limit_support_retractions description"
-msgid "Omit retraction when moving from support to support in a straight line. Enabling this setting saves print time, but can lead to excessive stringing within the support structure."
-msgstr "Пропустить откат при переходе от поддержки к поддержке по прямой линии. Включение этого параметра обеспечивает экономию времени печати, но может привести к чрезмерной строчности структуры поддержек."
-
-#: fdmprinter.def.json
 msgctxt "material_standby_temperature label"
 msgid "Standby Temperature"
 msgstr "Температура ожидания"
@@ -2406,56 +2393,6 @@ msgstr "Температура ожидания"
 msgctxt "material_standby_temperature description"
 msgid "The temperature of the nozzle when another nozzle is currently used for printing."
 msgstr "Температура сопла в момент, когда для печати используется другое сопло."
-
-#: fdmprinter.def.json
-msgctxt "switch_extruder_retraction_amount label"
-msgid "Nozzle Switch Retraction Distance"
-msgstr "Величина отката при смене экструдера"
-
-#: fdmprinter.def.json
-msgctxt "switch_extruder_retraction_amount description"
-msgid "The amount of retraction when switching extruders. Set to 0 for no retraction at all. This should generally be the same as the length of the heat zone."
-msgstr "Величина отката при переключении экструдеров. Установите 0 для отключения отката. Обычно соответствует длине зоны нагрева."
-
-#: fdmprinter.def.json
-msgctxt "switch_extruder_retraction_speeds label"
-msgid "Nozzle Switch Retraction Speed"
-msgstr "Скорость отката при смене экструдера"
-
-#: fdmprinter.def.json
-msgctxt "switch_extruder_retraction_speeds description"
-msgid "The speed at which the filament is retracted. A higher retraction speed works better, but a very high retraction speed can lead to filament grinding."
-msgstr "Скорость с которой материал будет извлечён и возвращён обратно при откате. Высокая скорость отката работает лучше, но очень большая скорость портит материал."
-
-#: fdmprinter.def.json
-msgctxt "switch_extruder_retraction_speed label"
-msgid "Nozzle Switch Retract Speed"
-msgstr "Скорость отката при смене экструдера"
-
-#: fdmprinter.def.json
-msgctxt "switch_extruder_retraction_speed description"
-msgid "The speed at which the filament is retracted during a nozzle switch retract."
-msgstr "Скорость, с которой материал будет извлечён при откате для смены экструдера."
-
-#: fdmprinter.def.json
-msgctxt "switch_extruder_prime_speed label"
-msgid "Nozzle Switch Prime Speed"
-msgstr "Скорость наполнения при смене экструдера"
-
-#: fdmprinter.def.json
-msgctxt "switch_extruder_prime_speed description"
-msgid "The speed at which the filament is pushed back after a nozzle switch retraction."
-msgstr "Скорость, с которой материал будет возвращён обратно при смене экструдера."
-
-#: fdmprinter.def.json
-msgctxt "switch_extruder_extra_prime_amount label"
-msgid "Nozzle Switch Extra Prime Amount"
-msgstr "Дополнительно заполняемый объем при смене экструдера"
-
-#: fdmprinter.def.json
-msgctxt "switch_extruder_extra_prime_amount description"
-msgid "Extra material to prime after nozzle switching."
-msgstr "Дополнительный объем материала для заполнения после смены экструдера."
 
 #: fdmprinter.def.json
 msgctxt "speed label"
@@ -3078,6 +3015,116 @@ msgid "travel"
 msgstr "перемещение"
 
 #: fdmprinter.def.json
+msgctxt "retraction_enable label"
+msgid "Enable Retraction"
+msgstr "Разрешить откат"
+
+#: fdmprinter.def.json
+msgctxt "retraction_enable description"
+msgid "Retract the filament when the nozzle is moving over a non-printed area."
+msgstr ""
+
+#: fdmprinter.def.json
+msgctxt "retract_at_layer_change label"
+msgid "Retract at Layer Change"
+msgstr "Откат при смене слоя"
+
+#: fdmprinter.def.json
+msgctxt "retract_at_layer_change description"
+msgid "Retract the filament when the nozzle is moving to the next layer."
+msgstr "Откат нити при перемещении сопла на следующий слой."
+
+#: fdmprinter.def.json
+msgctxt "retraction_amount label"
+msgid "Retraction Distance"
+msgstr "Величина отката"
+
+#: fdmprinter.def.json
+msgctxt "retraction_amount description"
+msgid "The length of material retracted during a retraction move."
+msgstr "Длина нити материала, которая будет извлечена по время отката."
+
+#: fdmprinter.def.json
+msgctxt "retraction_speed label"
+msgid "Retraction Speed"
+msgstr "Скорость отката"
+
+#: fdmprinter.def.json
+msgctxt "retraction_speed description"
+msgid "The speed at which the filament is retracted and primed during a retraction move."
+msgstr "Скорость, с которой материал будет извлечён и возвращён обратно при откате."
+
+#: fdmprinter.def.json
+msgctxt "retraction_retract_speed label"
+msgid "Retraction Retract Speed"
+msgstr "Скорость извлечения при откате"
+
+#: fdmprinter.def.json
+msgctxt "retraction_retract_speed description"
+msgid "The speed at which the filament is retracted during a retraction move."
+msgstr "Скорость с которой нить будет извлечена при откате."
+
+#: fdmprinter.def.json
+msgctxt "retraction_prime_speed label"
+msgid "Retraction Prime Speed"
+msgstr "Скорость заправки при откате"
+
+#: fdmprinter.def.json
+msgctxt "retraction_prime_speed description"
+msgid "The speed at which the filament is primed during a retraction move."
+msgstr "Скорость с которой материал будет возвращён при откате."
+
+#: fdmprinter.def.json
+msgctxt "retraction_extra_prime_amount label"
+msgid "Retraction Extra Prime Amount"
+msgstr "Дополнительно заполняемый объём при откате"
+
+#: fdmprinter.def.json
+msgctxt "retraction_extra_prime_amount description"
+msgid "Some material can ooze away during a travel move, which can be compensated for here."
+msgstr "Небольшое количество материала может выдавиться во время движения, что может быть скомпенсировано с помощью данного параметра."
+
+#: fdmprinter.def.json
+msgctxt "retraction_min_travel label"
+msgid "Retraction Minimum Travel"
+msgstr "Минимальное перемещение при откате"
+
+#: fdmprinter.def.json
+msgctxt "retraction_min_travel description"
+msgid "The minimum distance of travel needed for a retraction to happen at all. This helps to get fewer retractions in a small area."
+msgstr "Минимальное расстояние на которое необходимо переместиться для отката, чтобы он произошёл. Этот параметр помогает уменьшить количество откатов на небольшой области печати."
+
+#: fdmprinter.def.json
+msgctxt "retraction_count_max label"
+msgid "Maximum Retraction Count"
+msgstr "Максимальное количество откатов"
+
+#: fdmprinter.def.json
+msgctxt "retraction_count_max description"
+msgid "This setting limits the number of retractions occurring within the minimum extrusion distance window. Further retractions within this window will be ignored. This avoids retracting repeatedly on the same piece of filament, as that can flatten the filament and cause grinding issues."
+msgstr "Данный параметр ограничивает число откатов, которые происходят внутри окна минимальной дистанции экструзии. Дальнейшие откаты внутри этого окна будут проигнорированы. Это исключает выполнение множества повторяющихся откатов над одним и тем же участком нити, что позволяет избежать проблем с истиранием нити."
+
+#: fdmprinter.def.json
+msgctxt "retraction_extrusion_window label"
+msgid "Minimum Extrusion Distance Window"
+msgstr "Окно минимальной расстояния экструзии"
+
+#: fdmprinter.def.json
+msgctxt "retraction_extrusion_window description"
+msgid "The window in which the maximum retraction count is enforced. This value should be approximately the same as the retraction distance, so that effectively the number of times a retraction passes the same patch of material is limited."
+msgstr "Окно, в котором может быть выполнено максимальное количество откатов. Это значение приблизительно должно совпадать с расстоянием отката таким образом, чтобы количество выполненных откатов распределялось на величину выдавленного материала."
+
+#: fdmprinter.def.json
+msgctxt "limit_support_retractions label"
+msgid "Limit Support Retractions"
+msgstr "Ограничить откаты поддержки"
+
+#: fdmprinter.def.json
+msgctxt "limit_support_retractions description"
+msgid "Omit retraction when moving from support to support in a straight line. Enabling this setting saves print time, but can lead to excessive stringing within the support structure."
+msgstr "Пропустить откат при переходе от поддержки к поддержке по прямой линии. Включение этого параметра обеспечивает экономию времени печати, но может привести к чрезмерной строчности структуры поддержек."
+
+#: fdmprinter.def.json
 msgctxt "retraction_combing label"
 msgid "Combing Mode"
 msgstr "Режим комбинга"
@@ -3570,9 +3617,7 @@ msgstr "Направление линии заполнения поддерже�
 #: fdmprinter.def.json
 msgctxt "support_infill_angles description"
 msgid "A list of integer line directions to use. Elements from the list are used sequentially as the layers progress and when the end of the list is reached, it starts at the beginning again. The list items are separated by commas and the whole list is contained in square brackets. Default is an empty list which means use the default angle 0 degrees."
-msgstr "Список целочисленных направлений линии. Элементы списка используются последовательно по мере печати слоев, и, когда конец списка будет достигнут, он начнется"
-" сначала. Элементы списка отделяются запятыми, и сам список заключен в квадратные скобки. По умолчанию список пустой, что означает использование стандартного"
-" угла 0 градусов."
+msgstr "Список целочисленных направлений линии. Элементы списка используются последовательно по мере печати слоев, и, когда конец списка будет достигнут, он начнется сначала. Элементы списка отделяются запятыми, и сам список заключен в квадратные скобки. По умолчанию список пустой, что означает использование стандартного угла 0 градусов."
 
 #: fdmprinter.def.json
 msgctxt "support_brim_enable label"
@@ -3671,8 +3716,8 @@ msgstr "Минимальный X/Y зазор поддержки"
 
 #: fdmprinter.def.json
 msgctxt "support_xy_distance_overhang description"
-msgid "Distance of the support structure from the overhang in the X/Y directions. "
-msgstr "Зазор между структурами поддержек и нависанием по осям X/Y. "
+msgid "Distance of the support structure from the overhang in the X/Y directions."
+msgstr ""
 
 #: fdmprinter.def.json
 msgctxt "support_bottom_stair_step_height label"
@@ -3986,8 +4031,8 @@ msgstr "Минимальная зона связующего слоя"
 
 #: fdmprinter.def.json
 msgctxt "minimum_interface_area description"
-msgid "Minimum area size for support interface polygons. Polygons which have an area smaller than this value will not be generated."
-msgstr "Минимальная площадь зоны для полигонов связующего слоя. Полигоны с площадью меньше данного значения не будут генерироваться."
+msgid "Minimum area size for support interface polygons. Polygons which have an area smaller than this value will be printed as normal support."
+msgstr "Минимальная площадь зоны для полигонов связующего слоя. Полигоны с площадью меньше данного значения будут печататься как поддержки нормали."
 
 #: fdmprinter.def.json
 msgctxt "minimum_roof_area label"
@@ -3996,8 +4041,8 @@ msgstr "Минимальная зона верхней части поддерж
 
 #: fdmprinter.def.json
 msgctxt "minimum_roof_area description"
-msgid "Minimum area size for the roofs of the support. Polygons which have an area smaller than this value will not be generated."
-msgstr "Минимальная площадь зоны для верхних частей поддержек. Полигоны с площадью меньше данного значения не будут генерироваться."
+msgid "Minimum area size for the roofs of the support. Polygons which have an area smaller than this value will be printed as normal support."
+msgstr "Минимальная площадь зоны для верхних частей поддержек. Полигоны с площадью меньше данного значения будут печататься как поддержки нормали."
 
 #: fdmprinter.def.json
 msgctxt "minimum_bottom_area label"
@@ -4006,8 +4051,8 @@ msgstr "Минимальная зона нижней части поддерже
 
 #: fdmprinter.def.json
 msgctxt "minimum_bottom_area description"
-msgid "Minimum area size for the floors of the support. Polygons which have an area smaller than this value will not be generated."
-msgstr "Минимальная площадь зоны для нижних частей поддержек. Полигоны с площадью меньше данного значения не будут генерироваться."
+msgid "Minimum area size for the floors of the support. Polygons which have an area smaller than this value will be printed as normal support."
+msgstr "Минимальная площадь зоны для нижних частей поддержек. Полигоны с площадью меньше данного значения будут печататься как поддержки нормали."
 
 #: fdmprinter.def.json
 msgctxt "support_interface_offset label"
@@ -4047,9 +4092,7 @@ msgstr "Направления линии связующего слоя подд
 #: fdmprinter.def.json
 msgctxt "support_interface_angles description"
 msgid "A list of integer line directions to use. Elements from the list are used sequentially as the layers progress and when the end of the list is reached, it starts at the beginning again. The list items are separated by commas and the whole list is contained in square brackets. Default is an empty list which means use the default angles (alternates between 45 and 135 degrees if interfaces are quite thick or 90 degrees)."
-msgstr "Список целочисленных направлений линии. Элементы списка используются последовательно по мере печати слоев, и, когда конец списка будет достигнут, он начнется"
-" сначала. Элементы списка отделяются запятыми, и сам список заключен в квадратные скобки. По умолчанию список пустой, что означает использование стандартных"
-" углов (45 либо 135 градусов, если связующий слой довольно толстый, или 90 градусов)."
+msgstr "Список целочисленных направлений линии. Элементы списка используются последовательно по мере печати слоев, и, когда конец списка будет достигнут, он начнется сначала. Элементы списка отделяются запятыми, и сам список заключен в квадратные скобки. По умолчанию список пустой, что означает использование стандартных углов (45 либо 135 градусов, если связующий слой довольно толстый, или 90 градусов)."
 
 #: fdmprinter.def.json
 msgctxt "support_roof_angles label"
@@ -4059,9 +4102,7 @@ msgstr "Направления линии крыши поддержек"
 #: fdmprinter.def.json
 msgctxt "support_roof_angles description"
 msgid "A list of integer line directions to use. Elements from the list are used sequentially as the layers progress and when the end of the list is reached, it starts at the beginning again. The list items are separated by commas and the whole list is contained in square brackets. Default is an empty list which means use the default angles (alternates between 45 and 135 degrees if interfaces are quite thick or 90 degrees)."
-msgstr "Список целочисленных направлений линии. Элементы списка используются последовательно по мере печати слоев, и, когда конец списка будет достигнут, он начнется"
-" сначала. Элементы списка отделяются запятыми, и сам список заключен в квадратные скобки. По умолчанию список пустой, что означает использование стандартных"
-" углов (45 либо 135 градусов, если связующий слой довольно толстый, или 90 градусов)."
+msgstr "Список целочисленных направлений линии. Элементы списка используются последовательно по мере печати слоев, и, когда конец списка будет достигнут, он начнется сначала. Элементы списка отделяются запятыми, и сам список заключен в квадратные скобки. По умолчанию список пустой, что означает использование стандартных углов (45 либо 135 градусов, если связующий слой довольно толстый, или 90 градусов)."
 
 #: fdmprinter.def.json
 msgctxt "support_bottom_angles label"
@@ -4071,9 +4112,7 @@ msgstr "Направления линии низа поддержек"
 #: fdmprinter.def.json
 msgctxt "support_bottom_angles description"
 msgid "A list of integer line directions to use. Elements from the list are used sequentially as the layers progress and when the end of the list is reached, it starts at the beginning again. The list items are separated by commas and the whole list is contained in square brackets. Default is an empty list which means use the default angles (alternates between 45 and 135 degrees if interfaces are quite thick or 90 degrees)."
-msgstr "Список целочисленных направлений линии. Элементы списка используются последовательно по мере печати слоев, и, когда конец списка будет достигнут, он начнется"
-" сначала. Элементы списка отделяются запятыми, и сам список заключен в квадратные скобки. По умолчанию список пустой, что означает использование стандартных"
-" углов (45 либо 135 градусов, если связующий слой довольно толстый, или 90 градусов)."
+msgstr "Список целочисленных направлений линии. Элементы списка используются последовательно по мере печати слоев, и, когда конец списка будет достигнут, он начнется сначала. Элементы списка отделяются запятыми, и сам список заключен в квадратные скобки. По умолчанию список пустой, что означает использование стандартных углов (45 либо 135 градусов, если связующий слой довольно толстый, или 90 градусов)."
 
 #: fdmprinter.def.json
 msgctxt "support_fan_enable label"
@@ -4278,6 +4317,16 @@ msgstr "Количество линий каймы"
 msgctxt "brim_line_count description"
 msgid "The number of lines used for a brim. More brim lines enhance adhesion to the build plate, but also reduces the effective print area."
 msgstr "Количество линий, используемых для печати каймы. Большее количество линий каймы улучшает прилипание к столу, но уменьшает эффективную область печати."
+
+#: fdmprinter.def.json
+msgctxt "brim_gap label"
+msgid "Brim Distance"
+msgstr "Расстояние до каймы"
+
+#: fdmprinter.def.json
+msgctxt "brim_gap description"
+msgid "The horizontal distance between the first brim line and the outline of the first layer of the print. A small gap can make the brim easier to remove while still providing the thermal benefits."
+msgstr "Горизонтальное расстояние между первой линией каймы и контуром первого слоя изделия. Небольшой зазор облегчит удаление каймы и позволит сохранить термические преимущества."
 
 #: fdmprinter.def.json
 msgctxt "brim_replaces_support label"
@@ -4710,14 +4759,64 @@ msgid "Distance of the ooze shield from the print, in the X/Y directions."
 msgstr "Дистанция до стенки защиты от модели, по осям X/Y."
 
 #: fdmprinter.def.json
+msgctxt "switch_extruder_retraction_amount label"
+msgid "Nozzle Switch Retraction Distance"
+msgstr "Величина отката при смене экструдера"
+
+#: fdmprinter.def.json
+msgctxt "switch_extruder_retraction_amount description"
+msgid "The amount of retraction when switching extruders. Set to 0 for no retraction at all. This should generally be the same as the length of the heat zone."
+msgstr "Величина отката при переключении экструдеров. Установите 0 для отключения отката. Обычно соответствует длине зоны нагрева."
+
+#: fdmprinter.def.json
+msgctxt "switch_extruder_retraction_speeds label"
+msgid "Nozzle Switch Retraction Speed"
+msgstr "Скорость отката при смене экструдера"
+
+#: fdmprinter.def.json
+msgctxt "switch_extruder_retraction_speeds description"
+msgid "The speed at which the filament is retracted. A higher retraction speed works better, but a very high retraction speed can lead to filament grinding."
+msgstr "Скорость с которой материал будет извлечён и возвращён обратно при откате. Высокая скорость отката работает лучше, но очень большая скорость портит материал."
+
+#: fdmprinter.def.json
+msgctxt "switch_extruder_retraction_speed label"
+msgid "Nozzle Switch Retract Speed"
+msgstr "Скорость отката при смене экструдера"
+
+#: fdmprinter.def.json
+msgctxt "switch_extruder_retraction_speed description"
+msgid "The speed at which the filament is retracted during a nozzle switch retract."
+msgstr "Скорость, с которой материал будет извлечён при откате для смены экструдера."
+
+#: fdmprinter.def.json
+msgctxt "switch_extruder_prime_speed label"
+msgid "Nozzle Switch Prime Speed"
+msgstr "Скорость наполнения при смене экструдера"
+
+#: fdmprinter.def.json
+msgctxt "switch_extruder_prime_speed description"
+msgid "The speed at which the filament is pushed back after a nozzle switch retraction."
+msgstr "Скорость, с которой материал будет возвращён обратно при смене экструдера."
+
+#: fdmprinter.def.json
+msgctxt "switch_extruder_extra_prime_amount label"
+msgid "Nozzle Switch Extra Prime Amount"
+msgstr "Дополнительно заполняемый объем при смене экструдера"
+
+#: fdmprinter.def.json
+msgctxt "switch_extruder_extra_prime_amount description"
+msgid "Extra material to prime after nozzle switching."
+msgstr "Дополнительный объем материала для заполнения после смены экструдера."
+
+#: fdmprinter.def.json
 msgctxt "meshfix label"
 msgid "Mesh Fixes"
 msgstr "Ремонт объектов"
 
 #: fdmprinter.def.json
 msgctxt "meshfix description"
-msgid "category_fixes"
-msgstr "category_fixes"
+msgid "Make the meshes more suited for 3D printing."
+msgstr ""
 
 #: fdmprinter.def.json
 msgctxt "meshfix_union_all label"
@@ -4800,14 +4899,44 @@ msgid "Remove empty layers beneath the first printed layer if they are present. 
 msgstr "Удаление пустых слоёв под первым печатаемым слоем, если они имеются. Отключение этой функции может привести к созданию первых пустых слоев, если для параметра «Допуск слайсинга» установлено значение «Включение» или «Середина»."
 
 #: fdmprinter.def.json
+msgctxt "meshfix_maximum_resolution label"
+msgid "Maximum Resolution"
+msgstr "Максимальное разрешение"
+
+#: fdmprinter.def.json
+msgctxt "meshfix_maximum_resolution description"
+msgid "The minimum size of a line segment after slicing. If you increase this, the mesh will have a lower resolution. This may allow the printer to keep up with the speed it has to process g-code and will increase slice speed by removing details of the mesh that it can't process anyway."
+msgstr "Минимальный размер сегмента линии после слайсинга. Увеличение значения этого параметра понизит разрешение модели. Это может позволить принтеру поддерживать скорость обработки кода G и увеличит скорость слайсинга за счет удаления деталей модели, которые он в любом случае не сможет обработать."
+
+#: fdmprinter.def.json
+msgctxt "meshfix_maximum_travel_resolution label"
+msgid "Maximum Travel Resolution"
+msgstr "Максимальное разрешение перемещения"
+
+#: fdmprinter.def.json
+msgctxt "meshfix_maximum_travel_resolution description"
+msgid "The minimum size of a travel line segment after slicing. If you increase this, the travel moves will have less smooth corners. This may allow the printer to keep up with the speed it has to process g-code, but it may cause model avoidance to become less accurate."
+msgstr "Минимальный размер сегмента линии перемещения после разделения на слои. При увеличении этого значения углы при перемещении будут менее сглаженными. Это может помочь принтеру поддерживать скорость обработки G-кода, однако при этом может снизиться точность избегания моделей."
+
+#: fdmprinter.def.json
+msgctxt "meshfix_maximum_deviation label"
+msgid "Maximum Deviation"
+msgstr "Максимальное отклонение"
+
+#: fdmprinter.def.json
+msgctxt "meshfix_maximum_deviation description"
+msgid "The maximum deviation allowed when reducing the resolution for the Maximum Resolution setting. If you increase this, the print will be less accurate, but the g-code will be smaller. Maximum Deviation is a limit for Maximum Resolution, so if the two conflict the Maximum Deviation will always be held true."
+msgstr "Максимальное допустимое отклонение при снижении разрешения для параметра максимального разрешения. Увеличение этого значения понизит точность печати и уменьшит значение G-кода. Максимальное отклонение является пределом для максимального разрешения, поэтому, если они конфликтуют, истинным считается максимальное отклонение."
+
+#: fdmprinter.def.json
 msgctxt "blackmagic label"
 msgid "Special Modes"
 msgstr "Специальные режимы"
 
 #: fdmprinter.def.json
 msgctxt "blackmagic description"
-msgid "category_blackmagic"
-msgstr "category_blackmagic"
+msgid "Non-traditional ways to print your models."
+msgstr ""
 
 #: fdmprinter.def.json
 msgctxt "print_sequence label"
@@ -4816,8 +4945,8 @@ msgstr "Последовательная печать"
 
 #: fdmprinter.def.json
 msgctxt "print_sequence description"
-msgid "Whether to print all models one layer at a time or to wait for one model to finish, before moving on to the next. One at a time mode is only possible if all models are separated in such a way that the whole print head can move in between and all models are lower than the distance between the nozzle and the X/Y axes."
-msgstr "Печатать ли все модели послойно или каждую модель в отдельности. Отдельная печать возможна в случае, когда все модели разделены так, чтобы между ними могла проходить голова принтера и все модели ниже чем расстояние до осей X/Y."
+msgid "Whether to print all models one layer at a time or to wait for one model to finish, before moving on to the next. One at a time mode is possible if a) only one extruder is enabled and b) all models are separated in such a way that the whole print head can move in between and all models are lower than the distance between the nozzle and the X/Y axes. "
+msgstr "Печатать все модели послойно или ждать завершения одной модели, прежде чем переходить к следующей. Режим «один за раз» может использоваться, если а) активен только один экструдер и б) все модели разделены таким образом, что печатающая головка может двигаться между ними и все модели ниже, чем расстояние между соплом и осями X/Y. "
 
 #: fdmprinter.def.json
 msgctxt "print_sequence option all_at_once"
@@ -4981,8 +5110,8 @@ msgstr "Экспериментальное"
 
 #: fdmprinter.def.json
 msgctxt "experimental description"
-msgid "experimental!"
-msgstr "экспериментальное!"
+msgid "Features that haven't completely been fleshed out yet."
+msgstr ""
 
 #: fdmprinter.def.json
 msgctxt "support_tree_enable label"
@@ -5043,26 +5172,6 @@ msgstr "Разрешение для расчета столкновений др
 msgctxt "support_tree_collision_resolution description"
 msgid "Resolution to compute collisions with to avoid hitting the model. Setting this lower will produce more accurate trees that fail less often, but increases slicing time dramatically."
 msgstr "Разрешение, применяемое при расчете столкновений во избежание столкновений с моделью. Если указать меньшее значение, древовидные структуры будут получаться более точными и устойчивыми, однако при этом значительно увеличится время разделения на слои."
-
-#: fdmprinter.def.json
-msgctxt "support_tree_wall_thickness label"
-msgid "Tree Support Wall Thickness"
-msgstr "Толщина стенки древовидной поддержки"
-
-#: fdmprinter.def.json
-msgctxt "support_tree_wall_thickness description"
-msgid "The thickness of the walls of the branches of tree support. Thicker walls take longer to print but don't fall over as easily."
-msgstr "Толщина стенок ответвлений древовидной поддержки. Для печати утолщенных стенок требуется больше времени, однако при этом возрастает устойчивость поддержки."
-
-#: fdmprinter.def.json
-msgctxt "support_tree_wall_count label"
-msgid "Tree Support Wall Line Count"
-msgstr "Количество линий стенки древовидной поддержки"
-
-#: fdmprinter.def.json
-msgctxt "support_tree_wall_count description"
-msgid "The number of walls of the branches of tree support. Thicker walls take longer to print but don't fall over as easily."
-msgstr "Количество стенок ответвлений древовидной поддержки. Для печати утолщенных стенок требуется больше времени, однако при этом возрастает устойчивость поддержки."
 
 #: fdmprinter.def.json
 msgctxt "slicing_tolerance label"
@@ -5173,38 +5282,6 @@ msgstr "Минимальная длина окружности полигона"
 msgctxt "minimum_polygon_circumference description"
 msgid "Polygons in sliced layers that have a circumference smaller than this amount will be filtered out. Lower values lead to higher resolution mesh at the cost of slicing time. It is meant mostly for high resolution SLA printers and very tiny 3D models with a lot of details."
 msgstr "Полигоны в разделенных слоях, длина окружности которых меньше указанной величины, будут отфильтрованы. Пониженные значения приводят к увеличению разрешения объекта за счет времени разделения. Это предназначено главным образом для принтеров SLA с высоким разрешением и миниатюрных 3D-моделей с множеством деталей."
-
-#: fdmprinter.def.json
-msgctxt "meshfix_maximum_resolution label"
-msgid "Maximum Resolution"
-msgstr "Максимальное разрешение"
-
-#: fdmprinter.def.json
-msgctxt "meshfix_maximum_resolution description"
-msgid "The minimum size of a line segment after slicing. If you increase this, the mesh will have a lower resolution. This may allow the printer to keep up with the speed it has to process g-code and will increase slice speed by removing details of the mesh that it can't process anyway."
-msgstr "Минимальный размер сегмента линии после слайсинга. Увеличение значения этого параметра понизит разрешение модели. Это может позволить принтеру поддерживать скорость обработки кода G и увеличит скорость слайсинга за счет удаления деталей модели, которые он в любом случае не сможет обработать."
-
-#: fdmprinter.def.json
-msgctxt "meshfix_maximum_travel_resolution label"
-msgid "Maximum Travel Resolution"
-msgstr "Максимальное разрешение перемещения"
-
-#: fdmprinter.def.json
-msgctxt "meshfix_maximum_travel_resolution description"
-msgid "The minimum size of a travel line segment after slicing. If you increase this, the travel moves will have less smooth corners. This may allow the printer to keep up with the speed it has to process g-code, but it may cause model avoidance to become less accurate."
-msgstr "Минимальный размер сегмента линии перемещения после разделения на слои. При увеличении этого значения углы при перемещении будут менее сглаженными. Это может помочь принтеру поддерживать скорость обработки G-кода, однако при этом может снизиться точность избегания моделей."
-
-#: fdmprinter.def.json
-msgctxt "meshfix_maximum_deviation label"
-msgid "Maximum Deviation"
-msgstr "Максимальное отклонение"
-
-#: fdmprinter.def.json
-msgctxt "meshfix_maximum_deviation description"
-msgid "The maximum deviation allowed when reducing the resolution for the Maximum Resolution setting. If you increase this, the print will be less accurate, but the g-code will be smaller. Maximum Deviation is a limit for Maximum Resolution, so if the two conflict the Maximum Deviation will always be held true."
-msgstr "Максимальное допустимое отклонение при снижении разрешения для параметра максимального разрешения. Увеличение этого значения понизит точность печати и"
-" уменьшит значение G-кода. Максимальное отклонение является пределом для максимального разрешения, поэтому, если они конфликтуют, истинным считается максимальное"
-" отклонение."
 
 #: fdmprinter.def.json
 msgctxt "support_skip_some_zags label"
@@ -5347,16 +5424,6 @@ msgid "The speed by which to move during coasting, relative to the speed of the 
 msgstr "Скорость, с которой производятся движения во время наката, относительно скорости печати. Рекомендуется использовать значение чуть меньше 100%, так как во время наката давление в боудене снижается."
 
 #: fdmprinter.def.json
-msgctxt "skin_alternate_rotation label"
-msgid "Alternate Skin Rotation"
-msgstr "Чередование вращения оболочек"
-
-#: fdmprinter.def.json
-msgctxt "skin_alternate_rotation description"
-msgid "Alternate the direction in which the top/bottom layers are printed. Normally they are printed diagonally only. This setting adds the X-only and Y-only directions."
-msgstr "Изменить направление, в котором печатаются слои крышки/дна. Обычно, они печатаются по диагонали. Данный параметр добавляет направления X-только и Y-только."
-
-#: fdmprinter.def.json
 msgctxt "cross_infill_pocket_size label"
 msgid "Cross 3D Pocket Size"
 msgstr "Размер карманов креста 3D"
@@ -5497,6 +5564,16 @@ msgid "Randomly jitter while printing the outer wall, so that the surface has a 
 msgstr "Вносит небольшое дрожание при печати внешней стенки, что придаёт поверхности шершавый вид."
 
 #: fdmprinter.def.json
+msgctxt "magic_fuzzy_skin_outside_only label"
+msgid "Fuzzy Skin Outside Only"
+msgstr "Только шершавая оболочка снаружи"
+
+#: fdmprinter.def.json
+msgctxt "magic_fuzzy_skin_outside_only description"
+msgid "Jitter only the parts' outlines and not the parts' holes."
+msgstr "Дрожание только контуров деталей, но не отверстий."
+
+#: fdmprinter.def.json
 msgctxt "magic_fuzzy_skin_thickness label"
 msgid "Fuzzy Skin Thickness"
 msgstr "Толщина шершавости оболочки"
@@ -5528,23 +5605,23 @@ msgstr "Среднее расстояние между случайными то
 
 #: fdmprinter.def.json
 msgctxt "flow_rate_max_extrusion_offset label"
-msgid "Flow rate compensation max extrusion offset"
+msgid "Flow Rate Compensation Max Extrusion Offset"
 msgstr "Макс. смещение экструзии для компенсации расхода"
 
 #: fdmprinter.def.json
 msgctxt "flow_rate_max_extrusion_offset description"
-msgid "The maximum distance in mm to compensate."
-msgstr "Максимальное компенсируемое расстояние в миллиметрах."
+msgid "The maximum distance in mm to move the filament to compensate for changes in flow rate."
+msgstr "Максимальное расстояние (в мм) перемещения материала для компенсации изменения расхода."
 
 #: fdmprinter.def.json
 msgctxt "flow_rate_extrusion_offset_factor label"
-msgid "Flow rate compensation factor"
+msgid "Flow Rate Compensation Factor"
 msgstr "Коэффициент компенсации расхода"
 
 #: fdmprinter.def.json
 msgctxt "flow_rate_extrusion_offset_factor description"
-msgid "The multiplication factor for the flow rate -> distance translation."
-msgstr "Коэффициент перевода расхода в расстояние."
+msgid "How far to move the filament in order to compensate for changes in flow rate, as a percentage of how far the filament would move in one second of extrusion."
+msgstr "Означает, насколько далеко следует переместить материал, чтобы компенсировать изменение расхода, в процентах от расстояния, на которое перемещается материал за одну секунду экструзии."
 
 #: fdmprinter.def.json
 msgctxt "wireframe_enabled label"
@@ -5837,13 +5914,13 @@ msgstr "Разница между высотой следующего слоя �
 
 #: fdmprinter.def.json
 msgctxt "adaptive_layer_height_threshold label"
-msgid "Adaptive Layers Threshold"
-msgstr "Порог для адаптивных слоев"
+msgid "Adaptive Layers Topography Size"
+msgstr "Размер топографии адаптивных слоев"
 
 #: fdmprinter.def.json
 msgctxt "adaptive_layer_height_threshold description"
-msgid "Threshold whether to use a smaller layer or not. This number is compared to the tan of the steepest slope in a layer."
-msgstr "Пороговое значение, при достижении которого будет использоваться меньший слой. Это число сравнивается с тангенсом наиболее крутого наклона в слое."
+msgid "Target horizontal distance between two adjacent layers. Reducing this setting causes thinner layers to be used to bring the edges of the layers closer together."
+msgstr "Целевое расстояние по горизонтали между двумя соседними слоями. Уменьшение этого значения приведет к сокращению толщины слоев, и края слоев станут ближе друг к другу."
 
 #: fdmprinter.def.json
 msgctxt "wall_overhang_angle label"
@@ -5852,8 +5929,8 @@ msgstr "Угол нависающей стенки"
 
 #: fdmprinter.def.json
 msgctxt "wall_overhang_angle description"
-msgid "Walls that overhang more than this angle will be printed using overhanging wall settings. When the value is 90, no walls will be treated as overhanging."
-msgstr "Стенки, нависающие под углом, который больше указанного, будут напечатаны с использованием настроек нависающей стенки. Если значение составляет 90, стенки не считаются нависающими."
+msgid "Walls that overhang more than this angle will be printed using overhanging wall settings. When the value is 90, no walls will be treated as overhanging. Overhang that gets supported by support will not be treated as overhang either."
+msgstr "Стенки, выступающие под углом больше указанного, будут напечатаны с использованием настроек выступающей стенки. Если значение составляет 90, стенки не считаются выступающими. Выступающие элементы, для которых имеется поддержка, также не считаются выступающими."
 
 #: fdmprinter.def.json
 msgctxt "wall_overhang_speed_factor label"
@@ -5894,6 +5971,16 @@ msgstr "Пороговое значение поддержки для оболо
 msgctxt "bridge_skin_support_threshold description"
 msgid "If a skin region is supported for less than this percentage of its area, print it using the bridge settings. Otherwise it is printed using the normal skin settings."
 msgstr "Если поддержка области оболочки составляет меньше указанного процентного значения от ее площади, печать должна быть выполнена с использованием настроек мостика. В противном случае печать осуществляется с использованием стандартных настроек оболочки."
+
+#: fdmprinter.def.json
+msgctxt "bridge_sparse_infill_max_density label"
+msgid "Bridge Sparse Infill Max Density"
+msgstr "Максимальная плотность разреженного заполнения мостика"
+
+#: fdmprinter.def.json
+msgctxt "bridge_sparse_infill_max_density description"
+msgid "Maximum density of infill considered to be sparse. Skin over sparse infill is considered to be unsupported and so may be treated as a bridge skin."
+msgstr "Максимальная плотность заполнения, считающегося разреженным. Оболочка поверх разреженного заполнения считается неподдерживаемой и, соответственно, может обрабатываться как оболочка мостика."
 
 #: fdmprinter.def.json
 msgctxt "bridge_wall_coast label"
@@ -6062,8 +6149,8 @@ msgstr "Очистка сопла между слоями"
 
 #: fdmprinter.def.json
 msgctxt "clean_between_layers description"
-msgid "Whether to include nozzle wipe G-Code between layers. Enabling this setting could influence behavior of retract at layer change. Please use Wipe Retraction settings to control retraction at layers where the wipe script will be working."
-msgstr "Следует ли добавлять G-код очистки сопла между слоями. Включение этого параметра может повлиять на ход отката при смене слоя. Используйте параметры отката с очисткой для управления откатом на слоях, для которых используется скрипт очистки."
+msgid "Whether to include nozzle wipe G-Code between layers (maximum 1 per layer). Enabling this setting could influence behavior of retract at layer change. Please use Wipe Retraction settings to control retraction at layers where the wipe script will be working."
+msgstr "Следует ли добавлять G-код очистки сопла между слоями (максимум один на слой). Включение этого параметра может повлиять на ход отката при смене слоя. Используйте параметры отката с очисткой для управления откатом на слоях, для которых используется скрипт очистки."
 
 #: fdmprinter.def.json
 msgctxt "max_extrusion_before_wipe label"
@@ -6072,8 +6159,8 @@ msgstr "Объем материала между очистками"
 
 #: fdmprinter.def.json
 msgctxt "max_extrusion_before_wipe description"
-msgid "Maximum material, that can be extruded before another nozzle wipe is initiated."
-msgstr "Максимальный объем материала, который можно выдавить перед очередной очисткой сопла."
+msgid "Maximum material that can be extruded before another nozzle wipe is initiated. If this value is less than the volume of material required in a layer, the setting has no effect in this layer, i.e. it is limited to one wipe per layer."
+msgstr "Максимальный объем материала, который можно выдавить перед очередной очисткой сопла. Если это значение меньше объема материала, требуемого для слоя, данная настройка в этом слое не действует (т. е. максимум одна очистка на слой)."
 
 #: fdmprinter.def.json
 msgctxt "wipe_retraction_enable label"
@@ -6127,8 +6214,8 @@ msgstr "Скорость, с которой нить будет втягиват
 
 #: fdmprinter.def.json
 msgctxt "wipe_retraction_prime_speed label"
-msgid "Retraction Prime Speed"
-msgstr "Скорость заправки при откате"
+msgid "Wipe Retraction Prime Speed"
+msgstr "Скорость заправки при откате с очисткой"
 
 #: fdmprinter.def.json
 msgctxt "wipe_retraction_prime_speed description"
@@ -6147,13 +6234,13 @@ msgstr "Приостановка после отмены отката."
 
 #: fdmprinter.def.json
 msgctxt "wipe_hop_enable label"
-msgid "Wipe Z Hop When Retracted"
-msgstr "Поднятие оси Z с очисткой при откате"
+msgid "Wipe Z Hop"
+msgstr "Поднятие оси Z при очистке"
 
 #: fdmprinter.def.json
 msgctxt "wipe_hop_enable description"
-msgid "Whenever a retraction is done, the build plate is lowered to create clearance between the nozzle and the print. It prevents the nozzle from hitting the print during travel moves, reducing the chance to knock the print from the build plate."
-msgstr "При каждом откате рабочий стол опускается для создания зазора между соплом и печатаемой деталью. Это предотвращает соударение сопла и печатаемой детали во время движений, снижая вероятность смещения печатаемой детали на рабочем столе."
+msgid "When wiping, the build plate is lowered to create clearance between the nozzle and the print. It prevents the nozzle from hitting the print during travel moves, reducing the chance to knock the print from the build plate."
+msgstr "При очистке рабочий стол опускается для создания зазора между соплом и печатаемой деталью. Это предотвращает соударение сопла и печатаемой детали во время движений, снижая вероятность смещения печатаемой детали на рабочем столе."
 
 #: fdmprinter.def.json
 msgctxt "wipe_hop_amount label"
@@ -6232,20 +6319,18 @@ msgstr "Скорость для малых элементов"
 
 #: fdmprinter.def.json
 msgctxt "small_feature_speed_factor description"
-msgid "Small features will be printed at this percentage of their normal print speed. Slower printing can help with adhestion and accuracy."
-msgstr "Малые элементы будут напечатаны со скоростью, составляющей этот процент от их нормальной скорости печати. Более медленная печать может улучшить адгезию"
-" и точность."
+msgid "Small features will be printed at this percentage of their normal print speed. Slower printing can help with adhesion and accuracy."
+msgstr "Малые элементы будут напечатаны со скоростью, составляющей этот процент от их нормальной скорости печати. Более медленная печать может улучшить адгезию и точность."
 
 #: fdmprinter.def.json
 msgctxt "small_feature_speed_factor_0 label"
-msgid "First Layer Speed"
-msgstr "Скорость первого слоя"
+msgid "Small Feature Initial Layer Speed"
+msgstr "Скорость первого слоя для небольших объектов"
 
 #: fdmprinter.def.json
 msgctxt "small_feature_speed_factor_0 description"
-msgid "Small features on the first layer will be printed at this percentage of their normal print speed. Slower printing can help with adhestion and accuracy."
-msgstr "Малые элементы на первом слое будут напечатаны со скоростью, составляющей этот процент от их нормальной скорости печати. Более медленная печать может улучшить"
-" адгезию и точность."
+msgid "Small features on the first layer will be printed at this percentage of their normal print speed. Slower printing can help with adhesion and accuracy."
+msgstr "Малые элементы на первом слое будут напечатаны со скоростью, составляющей этот процент от их нормальной скорости печати. Более медленная печать может улучшить адгезию и точность."
 
 #: fdmprinter.def.json
 msgctxt "command_line_settings label"
@@ -6306,6 +6391,178 @@ msgstr "Матрица вращения объекта"
 msgctxt "mesh_rotation_matrix description"
 msgid "Transformation matrix to be applied to the model when loading it from file."
 msgstr "Матрица преобразования, применяемая к модели при её загрузке из файла."
+
+#~ msgctxt "material_guid description"
+#~ msgid "GUID of the material. This is set automatically. "
+#~ msgstr "Идентификатор материала, устанавливается автоматически. "
+
+#~ msgctxt "machine_filament_park_distance label"
+#~ msgid "Filament Park Distance"
+#~ msgstr "Расстояние парковки материала"
+
+#~ msgctxt "machine_filament_park_distance description"
+#~ msgid "The distance from the tip of the nozzle where to park the filament when an extruder is no longer used."
+#~ msgstr "Расстояние от кончика сопла до места, где останавливается материал, пока экструдер не используется."
+
+#~ msgctxt "material_flush_purge_speed description"
+#~ msgid "Material Station internal value"
+#~ msgstr "Внутреннее значение Material Station"
+
+#~ msgctxt "material_flush_purge_length description"
+#~ msgid "Material Station internal value"
+#~ msgstr "Внутреннее значение Material Station"
+
+#~ msgctxt "material_end_of_filament_purge_speed label"
+#~ msgid "End Of Filament Purge Speed"
+#~ msgstr "Скорость выдавливания заканчивающегося материала"
+
+#~ msgctxt "material_end_of_filament_purge_speed description"
+#~ msgid "Material Station internal value"
+#~ msgstr "Внутреннее значение Material Station"
+
+#~ msgctxt "material_end_of_filament_purge_length label"
+#~ msgid "End Of Filament Purge Length"
+#~ msgstr "Длина выдавливания заканчивающегося материала"
+
+#~ msgctxt "material_end_of_filament_purge_length description"
+#~ msgid "Material Station internal value"
+#~ msgstr "Внутреннее значение Material Station"
+
+#~ msgctxt "material_maximum_park_duration description"
+#~ msgid "Material Station internal value"
+#~ msgstr "Внутреннее значение Material Station"
+
+#~ msgctxt "material_no_load_move_factor description"
+#~ msgid "Material Station internal value"
+#~ msgstr "Внутреннее значение Material Station"
+
+#~ msgctxt "retraction_enable description"
+#~ msgid "Retract the filament when the nozzle is moving over a non-printed area. "
+#~ msgstr "Откат нити при движении сопла вне зоны печати. "
+
+#~ msgctxt "support_xy_distance_overhang description"
+#~ msgid "Distance of the support structure from the overhang in the X/Y directions. "
+#~ msgstr "Зазор между структурами поддержек и нависанием по осям X/Y. "
+
+#~ msgctxt "meshfix description"
+#~ msgid "category_fixes"
+#~ msgstr "category_fixes"
+
+#~ msgctxt "blackmagic description"
+#~ msgid "category_blackmagic"
+#~ msgstr "category_blackmagic"
+
+#~ msgctxt "experimental description"
+#~ msgid "experimental!"
+#~ msgstr "экспериментальное!"
+
+#~ msgctxt "machine_head_polygon label"
+#~ msgid "Machine Head Polygon"
+#~ msgstr "Полигон головки принтера"
+
+#~ msgctxt "machine_head_polygon description"
+#~ msgid "A 2D silhouette of the print head (fan caps excluded)."
+#~ msgstr "2D контур головы принтера (исключая крышки вентилятора)."
+
+#~ msgctxt "print_sequence description"
+#~ msgid "Whether to print all models one layer at a time or to wait for one model to finish, before moving on to the next. One at a time mode is only possible if all models are separated in such a way that the whole print head can move in between and all models are lower than the distance between the nozzle and the X/Y axes."
+#~ msgstr "Печатать ли все модели послойно или каждую модель в отдельности. Отдельная печать возможна в случае, когда все модели разделены так, чтобы между ними могла проходить голова принтера и все модели ниже чем расстояние до осей X/Y."
+
+#~ msgctxt "support_tree_wall_thickness label"
+#~ msgid "Tree Support Wall Thickness"
+#~ msgstr "Толщина стенки древовидной поддержки"
+
+#~ msgctxt "support_tree_wall_thickness description"
+#~ msgid "The thickness of the walls of the branches of tree support. Thicker walls take longer to print but don't fall over as easily."
+#~ msgstr "Толщина стенок ответвлений древовидной поддержки. Для печати утолщенных стенок требуется больше времени, однако при этом возрастает устойчивость поддержки."
+
+#~ msgctxt "support_tree_wall_count label"
+#~ msgid "Tree Support Wall Line Count"
+#~ msgstr "Количество линий стенки древовидной поддержки"
+
+#~ msgctxt "support_tree_wall_count description"
+#~ msgid "The number of walls of the branches of tree support. Thicker walls take longer to print but don't fall over as easily."
+#~ msgstr "Количество стенок ответвлений древовидной поддержки. Для печати утолщенных стенок требуется больше времени, однако при этом возрастает устойчивость поддержки."
+
+#~ msgctxt "clean_between_layers description"
+#~ msgid "Whether to include nozzle wipe G-Code between layers. Enabling this setting could influence behavior of retract at layer change. Please use Wipe Retraction settings to control retraction at layers where the wipe script will be working."
+#~ msgstr "Следует ли добавлять G-код очистки сопла между слоями. Включение этого параметра может повлиять на ход отката при смене слоя. Используйте параметры отката с очисткой для управления откатом на слоях, для которых используется скрипт очистки."
+
+#~ msgctxt "max_extrusion_before_wipe description"
+#~ msgid "Maximum material, that can be extruded before another nozzle wipe is initiated."
+#~ msgstr "Максимальный объем материала, который можно выдавить перед очередной очисткой сопла."
+
+#~ msgctxt "wipe_retraction_prime_speed label"
+#~ msgid "Retraction Prime Speed"
+#~ msgstr "Скорость заправки при откате"
+
+#~ msgctxt "wipe_hop_enable label"
+#~ msgid "Wipe Z Hop When Retracted"
+#~ msgstr "Поднятие оси Z с очисткой при откате"
+
+#~ msgctxt "wipe_hop_enable description"
+#~ msgid "Whenever a retraction is done, the build plate is lowered to create clearance between the nozzle and the print. It prevents the nozzle from hitting the print during travel moves, reducing the chance to knock the print from the build plate."
+#~ msgstr "При каждом откате рабочий стол опускается для создания зазора между соплом и печатаемой деталью. Это предотвращает соударение сопла и печатаемой детали во время движений, снижая вероятность смещения печатаемой детали на рабочем столе."
+
+#~ msgctxt "minimum_interface_area description"
+#~ msgid "Minimum area size for support interface polygons. Polygons which have an area smaller than this value will not be generated."
+#~ msgstr "Минимальная площадь зоны для полигонов связующего слоя. Полигоны с площадью меньше данного значения не будут генерироваться."
+
+#~ msgctxt "minimum_roof_area description"
+#~ msgid "Minimum area size for the roofs of the support. Polygons which have an area smaller than this value will not be generated."
+#~ msgstr "Минимальная площадь зоны для верхних частей поддержек. Полигоны с площадью меньше данного значения не будут генерироваться."
+
+#~ msgctxt "minimum_bottom_area description"
+#~ msgid "Minimum area size for the floors of the support. Polygons which have an area smaller than this value will not be generated."
+#~ msgstr "Минимальная площадь зоны для нижних частей поддержек. Полигоны с площадью меньше данного значения не будут генерироваться."
+
+#~ msgctxt "skin_alternate_rotation label"
+#~ msgid "Alternate Skin Rotation"
+#~ msgstr "Чередование вращения оболочек"
+
+#~ msgctxt "skin_alternate_rotation description"
+#~ msgid "Alternate the direction in which the top/bottom layers are printed. Normally they are printed diagonally only. This setting adds the X-only and Y-only directions."
+#~ msgstr "Изменить направление, в котором печатаются слои крышки/дна. Обычно, они печатаются по диагонали. Данный параметр добавляет направления X-только и Y-только."
+
+#~ msgctxt "flow_rate_max_extrusion_offset label"
+#~ msgid "Flow rate compensation max extrusion offset"
+#~ msgstr "Макс. смещение экструзии для компенсации расхода"
+
+#~ msgctxt "flow_rate_max_extrusion_offset description"
+#~ msgid "The maximum distance in mm to compensate."
+#~ msgstr "Максимальное компенсируемое расстояние в миллиметрах."
+
+#~ msgctxt "flow_rate_extrusion_offset_factor label"
+#~ msgid "Flow rate compensation factor"
+#~ msgstr "Коэффициент компенсации расхода"
+
+#~ msgctxt "flow_rate_extrusion_offset_factor description"
+#~ msgid "The multiplication factor for the flow rate -> distance translation."
+#~ msgstr "Коэффициент перевода расхода в расстояние."
+
+#~ msgctxt "adaptive_layer_height_threshold label"
+#~ msgid "Adaptive Layers Threshold"
+#~ msgstr "Порог для адаптивных слоев"
+
+#~ msgctxt "adaptive_layer_height_threshold description"
+#~ msgid "Threshold whether to use a smaller layer or not. This number is compared to the tan of the steepest slope in a layer."
+#~ msgstr "Пороговое значение, при достижении которого будет использоваться меньший слой. Это число сравнивается с тангенсом наиболее крутого наклона в слое."
+
+#~ msgctxt "wall_overhang_angle description"
+#~ msgid "Walls that overhang more than this angle will be printed using overhanging wall settings. When the value is 90, no walls will be treated as overhanging."
+#~ msgstr "Стенки, нависающие под углом, который больше указанного, будут напечатаны с использованием настроек нависающей стенки. Если значение составляет 90, стенки не считаются нависающими."
+
+#~ msgctxt "small_feature_speed_factor description"
+#~ msgid "Small features will be printed at this percentage of their normal print speed. Slower printing can help with adhestion and accuracy."
+#~ msgstr "Малые элементы будут напечатаны со скоростью, составляющей этот процент от их нормальной скорости печати. Более медленная печать может улучшить адгезию и точность."
+
+#~ msgctxt "small_feature_speed_factor_0 label"
+#~ msgid "First Layer Speed"
+#~ msgstr "Скорость первого слоя"
+
+#~ msgctxt "small_feature_speed_factor_0 description"
+#~ msgid "Small features on the first layer will be printed at this percentage of their normal print speed. Slower printing can help with adhestion and accuracy."
+#~ msgstr "Малые элементы на первом слое будут напечатаны со скоростью, составляющей этот процент от их нормальной скорости печати. Более медленная печать может улучшить адгезию и точность."
 
 #~ msgctxt "ironing_enabled description"
 #~ msgid "Go over the top surface one additional time, but without extruding material. This is meant to melt the plastic on top further, creating a smoother surface."
